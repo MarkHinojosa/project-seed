@@ -1,3 +1,27 @@
+PROJECT-SEED
+
+Project-Seed is an open source, community driven knowledge and experience sharing platform. The technologies utilized are:
+
+React.JS
+Express.JS
+MongoDB
+
+
+For technical questions or contributions please contact me at markhinojosa1212@gmail.com
+
+
+
+Thanks for checking out Project-Seed! 
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
