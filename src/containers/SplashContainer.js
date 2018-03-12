@@ -1,10 +1,20 @@
-import { connect } from 'react-deux';
-import Splash from '../components/Splash';
+import { connect } from 'react-redux';
+import Splash from '../components/splash/splash.js';
+import {setAge} from '../actions/index.js';
 
-const mapStateToProps = () => {
+const mapStateToProps = (state) => {
   return {
     studentsAge: state.studentsAge
   }
 }
 
-export default connect(mapStateToProps)(Splash);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    selectAge: function(age){
+      let action = setAge(age);
+      dispatch(action);
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Splash);
