@@ -1,7 +1,7 @@
 import React from 'react';
 import './splash.css';
 
-const Splash = () => {
+const Splash = (props) => {
   return (
     <div>
       <div id="master" className="wrapper">

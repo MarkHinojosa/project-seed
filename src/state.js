@@ -1,3 +1,3 @@
 export default {
-  age: ""
+  studentsAge: "",
 }
