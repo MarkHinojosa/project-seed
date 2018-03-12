@@ -1,6 +1,9 @@
 import {combineReducers} from 'redux';
 
-const studentsAge = (state = 0, action) => {
+const studentsAge = (state = "", action) => {
+  if(action.type === "SET_AGE"){
+    return action.value
+  }
   return state
 }
 
