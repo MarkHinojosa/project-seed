@@ -1,0 +1,38 @@
+.grid-item {
+  border-radius: 10px;
+  width: 100%;
+  border: 3px solid black;
+} 
+ 
+section {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.imr {
+  height: 50%;
+  width: 100%;
+}
+
+grid-container {
+  display: inline-grid;
+}
+
+
+.cont { 
+  display: flex;
+  justify-content: space-around;
+}
+
+section > div {
+  height: 400px;
+}
+
+.entryDiv {
+  width: 30%;
+  border: black solid 3px;
+}
+.entryDiv :hover {
+  background-color: blanchedalmond;
+}
