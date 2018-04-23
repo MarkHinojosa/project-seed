@@ -1,16 +1,23 @@
-grid-item {
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+#adol-seed-img {
+  width: 60%;
+  max-width: 300px;
+  max-height: 300px;
+  padding-bottom: 10px; 
 }
 
-img {
-width: 40%;
+#adol-seed-wrapper {
+  display: grid; 
+  align-content: center;
+  justify-content: right;
 }
 
-p {
-font-size: 2em;
+.adol-seed-container {
+  display: grid;
+  grid-template-areas:
+    "nav content content"  
+    "nav content content";
+
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }

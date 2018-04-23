@@ -1,0 +1,9 @@
+
+.child-img:hover {
+  opacity:0.7 !important;
+}
+
+.child-img {
+  width: 1fr;
+  height: 70%;
+}

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Splash = (props) => {
   return (
-    <div className="splashBod">
       <div className="wrapper">
         <section1 className="item1">
           <h1>Welcome To Project-Seed</h1>
@@ -19,7 +18,6 @@ const Splash = (props) => {
           </div>         
         </section1>
       </div>
-    </div>
   )
 }
 

@@ -1,38 +1,91 @@
-.grid-item {
+
+.adult-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav content content"
+    "footer footer footer";
+
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+.adult-nav {
+  grid-template-areas:
+  "header header header"
+  "nav content content"
+  "footer footer footer";
+  height:100%;
+  display: grid;
+  position: relative;
+  text-align: left;
+  grid-area: nav;
+  align-content: center;
+  background: cornflowerblue;
+}
+
+.adult-img {
+  max-width: 1000px;
+  height: 100%;
+  width: 100%;
+  padding: 1px;
+}
+
+main {
+  grid-area: content;
+  height: 99%;
+}
+
+footer {
+  grid-area: footer;
+  background: brown;
+}
+
+
+.cont {
+  padding: 20px;
+  width: 90%;
+  height: 90%;
+  display: grid;
+  grid-gap: 10%;
+  grid-template: 200px / auto auto auto;
+}
+
+.adult-entry {
+  width: 1fr;
+  height: 70%;
+}
+
+.home-btn{
+  top: 50%;
+  height: 50px;
+  margin-top: -50px; /* account for padding and border if not using box-sizing: border-box; */
+  width: 90%;
+  background-color: cadetblue;
   border-radius: 10px;
-  width: 100%;
-  border: 3px solid black;
-} 
- 
-section {
-  display: flex;
-  justify-content: space-around;
-  
+  padding: 10px;
+  margin: 10px;
+  cursor:pointer; 
+  font-size: 20px;  
 }
 
-.imr {
-  height: 50%;
-  width: 100%;
-}
-
-grid-container {
-  display: inline-grid;
-}
-
-
-.cont { 
-  display: flex;
-  justify-content: space-around;
+.contribute-btn{
+  font-size: 20px;
+  top: 50%;
+  height: 50px;
+  margin-top: -50px; /* account for padding and border if not using box-sizing: border-box; */
+  width: 90%;
+  background-color: greenyellow;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  cursor:pointer; 
 }
 
 section > div {
   height: 400px;
 }
 
-.entryDiv {
-  width: 30%;
-  border: black solid 3px;
-}
-.entryDiv :hover {
-  background-color: blanchedalmond;
+.adult-img:hover {
+  opacity:0.7 !important;
 }

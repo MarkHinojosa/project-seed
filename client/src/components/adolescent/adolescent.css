@@ -1,0 +1,39 @@
+
+
+
+.adol-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav content content"
+    "footer footer footer";
+
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+.adol-img:hover {
+  opacity:0.7 !important;
+}
+
+
+.adol-img {
+  max-width: 600px;
+  height: 100%;
+  width: 100%;
+  padding: 1px;
+}
+
+.adol-nav {
+  grid-template-areas:
+  "header header header"
+  "nav content content"
+  "footer footer footer";
+  height:100%;
+  display: grid;
+  position: relative;
+  text-align: left;
+  grid-area: nav;
+  align-content: center;
+  background: cornflowerblue;
+}
