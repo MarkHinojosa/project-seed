@@ -1,0 +1,51 @@
+#topLevelMain {
+  height: 99%;
+}
+
+html,body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.grid-container {
+  grid-template-columns: repeat(9, 1fr);
+  display: grid;
+  grid-template-areas: "header header"
+                       "sidebar content"
+                       "footer footer";
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 200px;
+}
+
+.header {
+  grid-area: header;
+  background-color: purple;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: greenyellow;
+}
+
+.content {
+  grid-area: content;
+  background-color: bisque;
+}
+
+.entryDiv {
+  display: inline-block;
+  width: 20%;
+  align-items: center;
+  align-content: center;
+  background-color: whitesmoke;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  
+}
+
+h2 {
+  text-align: center;
+}

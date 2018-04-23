@@ -1,0 +1,68 @@
+
+#adult-seed-img {
+  max-width: 80%;
+}
+
+p {
+  font-size: 2em;
+}
+
+
+.adol-seed-title {
+  text-align: center;
+}
+
+
+article {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 740px 1fr;
+}
+
+article > * {
+  grid-column: 2;
+}
+
+article > img {
+  grid-column: 2;
+  margin: 20px 0;
+}
+
+.adult-seed-container {
+  display: grid;
+  grid-template-areas:
+    "nav content content"  
+    "nav content content";
+
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+
+.list-btn {
+  background-color: cornflowerblue;
+  top: 50%;
+  height: 50px;
+  margin-top: -50px; /* account for padding and border if not using box-sizing: border-box; */
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  cursor:pointer; 
+  font-size: 20px;  
+}
+
+.adult-seed-nav {
+  grid-template-areas:
+  "header header header"
+  "nav content content"
+  "footer footer footer";
+  height:100%;
+  display: grid;
+  position: relative;
+  text-align: left;
+  grid-area: nav;
+  align-content: center;
+  background: rgba(175, 5, 5, 0.925);
+}
