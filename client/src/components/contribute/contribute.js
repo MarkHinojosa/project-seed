@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-//added component 
+
 class Contribute extends Component {
+  constructor() {
+    super();
+    this.state = {
+      adult: {
+        ageGroup: "",
+        title: "",
+        body: "",
+        image: "",
+        video: "",
+      }
+    }
+  }
 
   render() {
+    console.log(this.props);
     return (
       <div className="adult-container">
         <nav className="adult-nav">
