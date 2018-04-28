@@ -37,6 +37,8 @@ export function adultsLoaded(adul) {
   };
 }
 
+
+
 export function loadAdolescents() {
   return function (dispatch) {
     dispatch({
@@ -57,6 +59,7 @@ export function adolescentsLoaded(adol) {
     value: adol
   };
 }
+
 
 export function loadChildSeed(id) {
   return function (dispatch) {
@@ -109,5 +112,35 @@ export function adolescentSeedLoaded(seed) {
   return {
     type: "GET_ADOLESCENT_SEED_DONE",
     value: seed
+  };
+}
+//below this is the create database entries section
+export function createChildSeed(c) {
+  return function (dispatch) {
+    fetch("/child", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(c)
+    }).then(() => dispatch(loadChildren()));
+  };
+}
+
+export function createAdolescentsSeed(c) {
+  return function (dispatch) {
+    fetch("/adolescent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(c)
+    }).then(() => dispatch(loadAdolescents()));
+  };
+}
+
+export function createAdultSeed(c) {
+  return function (dispatch) {
+    fetch("/adult", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(c)
+    }).then(() => dispatch(loadAdults()));
   };
 }
