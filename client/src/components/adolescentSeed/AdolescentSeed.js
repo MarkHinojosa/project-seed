@@ -16,7 +16,7 @@ class Adolescent extends Component {
         <nav className="adult-seed-nav">
           <nav1>
             <Link to="/"><button value="child" className="home-btn">Home</button></Link>
-            <Link to="/adult"><button value="child" className="list-btn">List</button></Link>
+            <Link to="/adol"><button value="child" className="list-btn">List</button></Link>
             <Link to="/contribute"><button value="child" className="contribute-btn">Contribute</button></Link>
           </nav1>
         </nav>

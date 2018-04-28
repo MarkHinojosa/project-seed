@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ChildSeed.css';
 import { Link } from "react-router-dom";
+
 class ChildSeed extends Component {
 
   componentDidMount() {
