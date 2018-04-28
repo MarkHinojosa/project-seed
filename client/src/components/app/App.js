@@ -14,7 +14,7 @@ import ToddlerContainer from '../../containers/ToddlerContainer';
 import  ChildSeedContainer from '../../containers/ChildSeedContainer';
 import  AdultSeedContainer from '../../containers/AdultSeedContainer';
 import  AdolescentSeedContainer from '../../containers/AdolescentSeedContainer';
-
+import Contribute from '../contribute/contribute.js'
 
 
 
@@ -32,7 +32,8 @@ class App extends Component {
               <Route exact path="/adolescent" component={AdolescentContainer} />
               <Route exact path="/adolescent/:id" component={AdolescentSeedContainer} />              
               <Route exact path="/adult" component={AdultContainer} />
-              <Route exact path="/adult/:id" component={AdultSeedContainer} />                                                                      
+              <Route exact path="/adult/:id" component={AdultSeedContainer} />
+              <Route exact path="/contribute" component={Contribute} />                                                                                    
               <Route exact path="/" component={SplashContainer} />              
             </Switch>
           </div>

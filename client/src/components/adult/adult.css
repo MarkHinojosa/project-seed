@@ -36,11 +36,6 @@ main {
   height: 99%;
 }
 
-footer {
-  grid-area: footer;
-  background: brown;
-}
-
 
 .cont {
   padding: 20px;

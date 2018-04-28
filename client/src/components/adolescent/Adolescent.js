@@ -14,7 +14,7 @@ class Adolescent extends Component {
       return ( 
         <div className="entryDiv" key={uniqueId}>
         <Link to={"/adolescent/" + uniqueId}><img className="adol-img" src={imageUrl} alt="adolescent" /></Link>
-        <h2>{summary}</h2>w
+        <h2>{summary}</h2>
       </div>
       )    
     });

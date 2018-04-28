@@ -18,9 +18,9 @@
 
 
 .adol-img {
-  max-width: 600px;
+  max-width: 1000px;
   height: 100%;
-  width: 100%;
+  width: 1fr;
   padding: 1px;
 }
 
