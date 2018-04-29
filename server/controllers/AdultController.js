@@ -11,11 +11,15 @@ export function show(request, response) {
   })
 }
 export function create(request, response) {
+  console.log("request body value: ", request.body)
   const adult = new Adult({
-    text: request.body.text
+    title: request.body.title,
+    body: request.body.body,
+    image: request.body.image,
+    video: request.body.video
   });
-
   adult.save().then(comm => {
+    console.log("attempted to save")
     return response.json(comm);
   });
 }

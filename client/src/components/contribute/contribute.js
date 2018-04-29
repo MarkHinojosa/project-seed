@@ -25,7 +25,59 @@ class Contribute extends Component {
           </nav1>
         </nav>
         <main className="cont">
-          <form>
+          {/* below is test submission code */}
+          <div>
+            {/* <button onClick={() => this.setState({adult: { body: "changed" }},
+           () => {
+             if(this.props.createAdultSeed) {
+               this.props.createAdultSeed(this.state.adult);
+             }
+           })}>change local state</button> */}
+            <h1>Adults test</h1>
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              if (this.props.createAdultSeed) {
+
+                this.props.createAdultSeed(this.state.adult);
+              }
+            }}>
+              <div>
+                Title: <input placeholder="required" onChange={(e) => {
+                  const adult = { title: e.target.value };
+                  this.setState({
+                    adult: Object.assign(this.state.adult, adult)
+                  });
+                }} />
+              </div>
+              <div>
+                Body: <input placeholder="required" onChange={(e) => {
+                  const adult = { body: e.target.value };
+                  this.setState({
+                    adult: Object.assign(this.state.adult, adult)
+                  });
+                }} />
+              </div>
+              <div>
+                Image: <input placeholder="optional" onChange={(e) => {
+                  const adult = { image: e.target.value };
+                  this.setState({
+                    adult: Object.assign(this.state.adult, adult)
+                  });
+                }} />
+              </div>
+              <div>
+                Video: <input placeholder="optional" onChange={(e) => {
+                  const adult = { video: e.target.value };
+                  this.setState({
+                    adult: Object.assign(this.state.adult, adult)
+                  });
+                }} />
+              </div>
+              <button>Create</button>
+            </form>
+          </div>
+
+          {/* <form>
             Age group:
             <br/>
             <input type="radio" name="ageGroup" id=""/>Child
@@ -41,7 +93,7 @@ class Contribute extends Component {
             Image: <input type="text" name="image"/>
             <p></p>
             Video: <input type="text" name="video"/>
-          </form>
+          </form> */}
         </main>
       </div>
     )
