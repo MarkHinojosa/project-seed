@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-
+import "./contribute.css"
 class Contribute extends Component {
   constructor() {
     super();
     this.state = {
-      adult: {
-        ageGroup: "",
-        title: "",
-        body: "",
-        image: "",
-        video: "",
-      }
+      ageGroup: "",
+      title: "",
+      body: "",
+      image: "",
+      video: "",
     }
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="adult-container">
         <nav className="adult-nav">
@@ -25,75 +22,76 @@ class Contribute extends Component {
           </nav1>
         </nav>
         <main className="cont">
-          {/* below is test submission code */}
           <div>
-            {/* <button onClick={() => this.setState({adult: { body: "changed" }},
-           () => {
-             if(this.props.createAdultSeed) {
-               this.props.createAdultSeed(this.state.adult);
-             }
-           })}>change local state</button> */}
-            <h1>Adults test</h1>
+            <h2>Thank you!</h2>
+            <form onChange={(e) => {
+              const ageSelected = e.target.value;
+              this.setState({
+                ageGroup: ageSelected
+              });
+            }}>
+              Age group:
+            <br />
+              <input type="radio" name="ageGroup" id="" value="child" />Child
+            <br />
+              <input type="radio" name="ageGroup" id="" value="adolescent" />Adolescent
+            <br />
+              <input type="radio" name="ageGroup" id="" value="adult" />Adult
+            </form>
+            <p></p>
             <form onSubmit={(e) => {
+              console.log(this.state)
               e.preventDefault();
-              if (this.props.createAdultSeed) {
-
-                this.props.createAdultSeed(this.state.adult);
+              if (this.state.ageGroup === "child" && this.props.createChildSeed) {
+                this.props.createChildSeed(this.state);
+              }
+              if (this.state.ageGroup === "adolescent" && this.props.createAdolescentSeed) {
+                console.log("made it to adolescent ")
+                this.props.createAdolescentSeed(this.state);
+              }
+              if (this.state.ageGroup === "adult" && this.props.createAdultSeed) {
+                this.props.createAdultSeed(this.state);
               }
             }}>
               <div>
                 Title: <input placeholder="required" onChange={(e) => {
-                  const adult = { title: e.target.value };
+                  const title = e.target.value;
                   this.setState({
-                    adult: Object.assign(this.state.adult, adult)
+                    title: title
+                  });
+                }} />s
+              </div>
+              <div>
+                <p></p>
+                Body: <textarea placeholder="required" onChange={(e) => {
+                  const body = e.target.value;
+                  this.setState({
+                    body: body
                   });
                 }} />
               </div>
               <div>
-                Body: <input placeholder="required" onChange={(e) => {
-                  const adult = { body: e.target.value };
-                  this.setState({
-                    adult: Object.assign(this.state.adult, adult)
-                  });
-                }} />
-              </div>
-              <div>
+                <p></p>
                 Image: <input placeholder="optional" onChange={(e) => {
-                  const adult = { image: e.target.value };
+                  const image = e.target.value;
                   this.setState({
-                    adult: Object.assign(this.state.adult, adult)
+                    image: image
                   });
                 }} />
               </div>
               <div>
+                <p></p>
                 Video: <input placeholder="optional" onChange={(e) => {
-                  const adult = { video: e.target.value };
+                  const video = e.target.value;
                   this.setState({
-                    adult: Object.assign(this.state.adult, adult)
+                    video: video
                   });
                 }} />
               </div>
-              <button>Create</button>
+              <p></p>
+              <button>Submit</button>
             </form>
           </div>
-
-          {/* <form>
-            Age group:
-            <br/>
-            <input type="radio" name="ageGroup" id=""/>Child
-            <br/>
-            <input type="radio" name="ageGroup" id=""/>Adolescent 
-            <br/>
-            <input type="radio" name="ageGroup" id=""/>Adult
-            <p></p>
-            Title: <input type="text" name="title"/>
-            <p></p>
-            Body: <input type="text" name="body"/>
-            <p></p>
-            Image: <input type="text" name="image"/>
-            <p></p>
-            Video: <input type="text" name="video"/>
-          </form> */}
         </main>
       </div>
     )

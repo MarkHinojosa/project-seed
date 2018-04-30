@@ -16,9 +16,6 @@ import  AdultSeedContainer from '../../containers/AdultSeedContainer';
 import  AdolescentSeedContainer from '../../containers/AdolescentSeedContainer';
 import ContributeContainer from '../../containers/ContributeContainer';
 
-
-
-
 class App extends Component {
   render() {
       return (

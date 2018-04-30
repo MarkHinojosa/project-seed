@@ -24,9 +24,9 @@
   background: cornflowerblue;
 }
 
-.adult-img {
-  max-width: 1000px;
-  height: 100%;
+.list-img {
+  max-width: 600px;
+  height: 70%;
   width: 100%;
   padding: 1px;
 }
@@ -38,6 +38,7 @@ main {
 
 
 .cont {
+  border: solid black 3px;
   padding: 20px;
   width: 90%;
   height: 90%;
@@ -46,7 +47,7 @@ main {
   grid-template: 200px / auto auto auto;
 }
 
-.adult-entry {
+.list-entry {
   width: 1fr;
   height: 70%;
 }

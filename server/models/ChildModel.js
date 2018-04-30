@@ -1,15 +1,11 @@
 import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
-  ageGroup: {
-    type: Number,
-    required: true
-  },
   title: {
     type: String,
     required: true
   },
-  text: {
+  body: {
     type: String,
     required: true
   },

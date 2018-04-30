@@ -15,6 +15,8 @@ const Splash = (props) => {
             <Link to="/child"><button value="child" className="btn">Child</button></Link>
             <Link to="/adolescent"><button value="adolescent" className="btn">Adolescent</button></Link>
             <Link to="/adult"><button value="adult" className="btn">Adult</button></Link>
+            <br/>
+            <p>Or to contribute an idea:</p>
             <Link to="/contribute"><button value="contribute" className="btn">Contriubute</button></Link>
           </div>         
         </section1>
