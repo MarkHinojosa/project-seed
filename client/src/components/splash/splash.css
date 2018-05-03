@@ -35,10 +35,9 @@ section > p {
   background-size:cover;
 }
 
-  .btn {
+.btn {
     background-color: goldenrod;
     padding: 10px;
     margin: 10px;
     cursor:pointer;
-  }
-
+}

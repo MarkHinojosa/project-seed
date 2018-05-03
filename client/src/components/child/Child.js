@@ -14,8 +14,8 @@ class Child extends Component {
       const uniqueId = instance._id;
       const summary = instance.title;
       return (
-        <div className="entryDiv" key={uniqueId}>
-          <Link to={"/child/" + uniqueId}><img className="child-img" src={imageUrl} alt="child" /></Link>
+        <div className="list-entry" key={uniqueId}>
+          <Link to={"/child/" + uniqueId}><img className="list-img" src={imageUrl} alt="child" /></Link>
           <h2>{summary}</h2>
         </div>
       )

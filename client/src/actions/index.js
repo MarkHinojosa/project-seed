@@ -125,7 +125,7 @@ export function createChildSeed(c) {
   };
 }
 
-export function createAdolescentsSeed(c) {
+export function createAdolescentSeed(c) {
   return function (dispatch) {
     fetch("/adolescent", {
       method: "POST",

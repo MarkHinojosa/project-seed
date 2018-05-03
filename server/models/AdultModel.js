@@ -1,10 +1,6 @@
 import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
-  ageGroup: {
-    type: Number,
-    required: false
-  },
   title: {
     type: String,
     required: true
@@ -18,6 +14,7 @@ const schema = new mongoose.Schema({
     required: false
   },
   video: {
+    type: String,
     required: false
   },
   likes : {

@@ -12,7 +12,10 @@ export function show(request, response) {
 }
 export function create(request, response) {
   const child = new Child({
-    text: request.body.text
+    title: request.body.title,
+    body: request.body.body,
+    image: request.body.image,
+    video: request.body.video
   });
 
   child.save().then(comm => {
