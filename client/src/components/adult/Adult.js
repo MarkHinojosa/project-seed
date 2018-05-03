@@ -12,7 +12,7 @@ class Adult extends Component {
       const uniqueId = instance._id;
       const summary = instance.title;
       return (
-        <div className="adult-entry">
+        <div className="list-entry">
           <Link key={uniqueId} to={"/adult/" + uniqueId}><img className="list-img" src={imageUrl} alt="adult" /></Link>
           <h2>{summary}</h2>
         </div>
